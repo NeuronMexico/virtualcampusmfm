@@ -3,9 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Virtual Campus - Medicina Fetal México</title>
+
+    <title>Unity WebGL Player | Virtual Campus MFM</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/10ed275d9f.js"></script>
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebApp.json", {onProgress: UnityProgress});
+    </script>
   </head>
+
   <body>
-    <iframe frameborder="0" src="https://d1h3sqidtebbz7.cloudfront.net/FUVEARCH/index.html" allowfullscreen="" width="100%" height="1000"></iframe>
-  </body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 100vw; height: 100vh; padding: 0; margin:0;"></div>
+    </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCupBzpvUaq5afVhqhmZ7orBcBdf66i5As",
+  authDomain: "archfuve.firebaseapp.com",
+  databaseURL: "https://archfuve.firebaseio.com",
+  projectId: "archfuve",
+  storageBucket: "archfuve.appspot.com",
+  messagingSenderId: "932289624891",
+  appId: "1:932289624891:web:f0a1461cf8a575f3dc951e"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
 </html>
